@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: white;
+  height: 100vh;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-bar {
+  width: 100%;
+  padding: 20px 40px;
+  background-color: #0a0a0a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #00ff88;
+}
+
+.return-link {
+  color: white;
+  text-decoration: none;
+  border: 2px solid #00ff88;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.shield-icon {
+  height: 100px;
+}
+
+.login-header {
+  color: #00ff88;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.login-box {
+  margin-top: 60px;
+  text-align: center;
+  width: 100%;
+  max-width: 500px; /* Aumenta el ancho si deseas más espacio */
+}
+
+.main-login-title {
+    color: #00ff88;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+  align-items: stretch;
+}
+
+.login-form label {
+  /*text-align: left;*/
+  font-size: 18px;
+  align-self: flex-start;
+}
+
+.login-form input {
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  width: 100%;
+}
+
+.login-link {
+  margin-top: 25px;
+  display: inline-block;
+  background-color: black;
+  color: white;
+  border: 2px solid #00ff88;
+  border-radius: 12px;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.login-link:hover,
+.return-link:hover {
+  background-color: #00ff88;
+  color: black;
+}
+
+.options {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.options a {
+  color: white;
+  text-decoration: none;
+}
+
+.options a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1.5s ease-in-out;
+}

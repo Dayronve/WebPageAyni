@@ -1,0 +1,433 @@
+/* Variables de colores */
+:root {
+    --dark-bg: #000; /* Fondo principal oscuro */
+    --green-accent: #E0E0E0; /* RESTAURADO: Esta variable ahora representa un gris claro, para acentos generales */
+    --light-text: #E0E0E0; /* Texto claro (casi blanco) */
+    --dark-text: #000; /* Texto oscuro (negro) */
+    --border-color: var(--green-accent); /* Los bordes seguirán siendo gris claro por defecto */
+}
+
+/* Reset básico y estilos generales del cuerpo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--light-text); /* Color de texto por defecto para todo el body */
+    line-height: 1.6;
+    overflow-x: hidden; /* Evita scroll horizontal no deseado */
+}
+
+/* Estilo para el contenedor central: para centrar contenido y limitar ancho */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Padding a los lados para que el contenido no toque los bordes */
+}
+
+/* Estilos de botones generales (para REGISTER)asdaw */
+.btn-register {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: var(--light-text); /* COLOR DE TEXTO */
+    border: 2px solid var(--border-color); /* Borde gris claro */
+}
+
+.btn-register:hover {
+    background-color: var(--green-accent); /* Fondo gris claro al hover */
+    color: var(--dark-text); /* Texto negro al hover */
+    border-color: var(--green-accent);
+}
+
+
+/* Estilos para el navbar */
+header.navbar {
+    background-color: var(--dark-bg);
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 60px; /* Tamaño del logo */
+    width: auto;
+    display: block;
+}
+
+.navbar nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.navbar nav ul li {
+    margin-left: 15px; /* Espacio entre los botones de navegación */
+}
+
+/* Estilo para los enlaces de navegación (WHO WE ARE, ABOUT US) */
+.navbar nav ul li a {
+    color: var(--light-text); /* Texto blanco */
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    border: 2px solid var(--green-accent); /* Borde gris claro para los botones de navegación */
+    padding: 8px 18px; /* Ajustado el padding para el tamaño del botón */
+    border-radius: 5px;
+    background-color: transparent; /* Fondo transparente por defecto para todos */
+}
+
+.navbar nav ul li a:hover {
+    background-color: var(--green-accent); /* Fondo gris claro al hover */
+    color: var(--dark-text); /* Texto negro al hover */
+    border-color: var(--green-accent);
+}
+
+
+/* Estilos para la sección Hero (Principal) */
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: left; /* Alineación del texto del hero a la izquierda */
+    padding: 80px 0;
+}
+
+.hero-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 400px;
+    margin-right: 50px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    color: #00FF00; /* Color verde directo para SOLO este título*/
+    margin-bottom: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Estilos para la sección de Features ("Sientete seguro con:") */
+.features-section {
+    padding: 100px 0;
+    background-color: #050505;
+}
+
+.features-section .container { /* Aseguramos que el contenedor de la sección esté centrado */
+    text-align: left; /* Título "Sientete seguro con:" a la izquierda */
+    display: block; /* Para que el h2 y el grid se apilen normalmente */
+}
+
+.features-section h2 {
+    font-size: 2.5em;
+    color: var(--light-text); /* Título "Sientete seguro con:" en blanco*/
+    margin-bottom: 60px;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-around; /* Distribuye el espacio equitativamente */
+    flex-wrap: wrap;
+    gap: 40px; /* Espacio entre los items */
+}
+
+.feature-item {
+    flex: 1;
+    min-width: 280px; /* Ancho mínimo para que no se aprieten demasiado */
+    max-width: 350px; /* Ancho máximo para cada item */
+    text-align: center;
+    padding: 20px;
+}
+
+.feature-item img {
+    height: 150px;
+    width: 150px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    border-radius: 50%; /* Si quieres que el img en sí sea circular, aunque el fondo ya esté en la imagen */
+}
+
+.feature-item h3 {
+    font-size: 1.5em;
+    color: var(--light-text); /* Títulos de características en blanco (gris claro)*/
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.feature-item p {
+    font-size: 1.1em;
+    color: var(--light-text); /* Texto de características en blanco*/
+}
+
+/* Estilos para las secciones Quienes somos / Sobre nosotros */
+.Quienessomos, /* Usamos las clases de las secciones directamente */
+.Sobrenosotros {
+    padding: 100px 0;
+}
+
+/* Asegura que el contenido (texto/imagen) de Quienes somos esté en flex */
+.Quienessomos .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    flex-direction: row; /* Texto izquierda, Imagen derecha (orden del HTML)*/
+}
+
+.Sobrenosotros .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    flex-direction: row; /* Texto derecha, Imagen izquierda (orden del HTML) */
+}
+
+.info-content {
+    flex: 1;
+    min-width: 450px;
+}
+
+.info-content h2 {
+    font-size: 2.5em;
+    color: var(--light-text); /* Títulos de información en blanco (gris claro)*/
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.info-content p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: var(--light-text); /* Texto de información en blanco*/
+}
+
+.info-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.info-image img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Estilos para el Footer */
+footer {
+    background-color: #050505;
+    padding: 60px 0 20px;
+    color: var(--light-text); /* Color de texto por defecto para el footer*/
+    text-align: left;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
+}
+
+.footer-col.logo-col img {
+    height: 60px; /* Logo del footer más grande */
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.footer-col h3 {
+    font-size: 1.3em;
+    color: var(--light-text); /* Títulos del footer en blanco (gris claro)*/
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: var(--light-text); /* Enlaces del footer en blanco*/
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: var(--green-accent); /* Al hover, los enlaces del footer serán gris claro*/
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    height: 30px;
+    width: 30px;
+    /* Aseguramos que los iconos se muestren en color, como en el prototipo*/
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: var(--light-text); /* Texto del copyright en blanco*/
+}
+
+/* --- Media Queries para Responsividad --- */
+
+@media (max-width: 992px) {
+    .hero-section .container,
+    .Quienessomos .container, /* Apila en columnas para Quienessomos en móvil*/
+    .Sobrenosotros .container { /* Apila en columnas para Sobrenosotros en móvil*/
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content,
+    .info-content {
+        margin-right: 0;
+        margin-bottom: 40px;
+        min-width: unset;
+    }
+
+    .hero-image,
+    .info-image {
+        min-width: unset;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8em;
+    }
+
+    .features-section h2 {
+        text-align: center; /* Centrar el título "Feel safe with:" en pantallas pequeñas */
+        padding-left: 0;
+    }
+
+    .feature-grid {
+        justify-content: center;
+    }
+
+    .footer-col {
+        min-width: unset;
+        max-width: unset;
+        text-align: center;
+    }
+
+    .footer-col.logo-col,
+    .footer-col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar nav ul li {
+        margin-left: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+
+    .features-section h2,
+    .info-content h2 {
+        font-size: 2em;
+    }
+
+    .info-content p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+
+    .btn-register {
+        padding: 10px 25px;
+        font-size: 0.9em;
+    }
+
+    .features-section h2,
+    .info-content h2 {
+        font-size: 1.8em;
+    }
+
+    .feature-item h3 {
+        font-size: 1.3em;
+    }
+}
