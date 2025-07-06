@@ -1,0 +1,116 @@
+/* ===== ESTILOS BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== ENCABEZADO (MODIFICADO) ===== */
+.encabezado {
+    width: 100%;
+    padding: min(3vh, 2rem) 0;
+    border-bottom: 0.3rem solid #28a745;
+    flex-shrink: 0;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(0.5rem, 2vw, 1.5rem);
+    width: min(95%, 1200px);
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+}
+
+.logo {
+    width: clamp(3rem, 8vw, 5rem);
+    height: clamp(3rem, 8vw, 5rem);
+    object-fit: contain;
+}
+
+/* CAMBIO PRINCIPAL: Textos en línea */
+.textos-encabezado {
+    display: flex;
+    align-items: baseline; /* Alinea por la base del texto */
+    gap: 0.5rem;
+}
+
+.texto-principal {
+    color: #28a745;
+    font-size: clamp(1.8rem, 6vw, 3rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.05rem;
+    white-space: nowrap;
+}
+
+.texto-secundario {
+    color: #28a745;
+    font-size: clamp(0.9rem, 3vw, 1.5rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    white-space: nowrap;
+    position: relative;
+    top: -0.2em; /* Ajuste fino de posición vertical */
+}
+
+/* ===== LAYOUT PRINCIPAL ===== */
+.contenedor-principal {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* ===== BARRA LATERAL ===== */
+.barra-lateral {
+    width: clamp(15rem, 25vw, 22rem);
+    background-color: #111;
+    border-right: 0.2rem solid #28a745;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.contenido-lateral {
+    padding: clamp(1.5rem, 3vh, 3rem) clamp(1rem, 2vw, 1.5rem);
+    text-align: center;
+    width: 100%;
+}
+
+.titulo-lateral {
+    color: #28a745;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    margin-bottom: clamp(1rem, 2vh, 1.5rem);
+    font-weight: 600;
+    word-break: break-word;
+}
+
+.parrafo {
+    color: #fff;
+    line-height: 1.5;
+    font-size: clamp(0.8rem, 1.8vw, 1rem);
+    margin-top: clamp(1rem, 2vh, 1.5rem);
+    padding: 0 clamp(0.5rem, 1vw, 1rem);
+    word-break: break-word;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.contenido {
+    flex: 1;
+    min-width: min(60%, 800px);
+    padding: clamp(1rem, 2vh, 2rem);
+    background-color: #000;
+}
