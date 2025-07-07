@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AyniGuard – Family Security Tree</title>
+    <link rel="stylesheet" href="../css/arbol.css" />
+    
+  </head>
+  <body>
+    <div class="app">
+      <!-- BARRA LATERAL -->
+      <aside class="sidebar">
+        <div class="sidebar-title">Menu</div>
+        <button class="sidebar-btn open-btn">
+          <img src="../img/icon-menu.webp" alt="Abrir menú" />
+        </button>
+        <button class="sidebar-btn">
+          <img src="../img/icon-map.png" alt="Mapa" />
+        </button>
+        <button class="sidebar-btn">
+          <img src="../img/icon-chat.png" alt="Chat" />
+        </button>
+        <button class="sidebar-btn">
+          <img src="../img/icon-family.png" alt="Familia" />
+        </button>
+        <button class="sidebar-btn close-btn">
+          <img src="../img/icon-menu.webp" alt="Cerrar menú" />
+        </button>
+      </aside>
+
+      <!-- CONTENIDO PRINCIPAL -->
+      <div class="container">
+        <header class="header">
+          <div class="header-left">
+            <img src="../img/logop.jpg" alt="logop" class="logop" />
+          </div>
+          <div class="header-right">
+            <img src="../img/medalla.png" alt="medalla" class="medalla" />
+            <img src="../img/Engranaje.png" alt="Engranaje" class="Engranaje" />
+            <img src="../img/notificacion.png" alt="notificacion" class="notificacion" />
+            <img src="../img/Perfil.png" alt="Usuario" class="avatar" />
+          </div>
+        </header>
+
+        <main class="main">
+          <section class="left-panel">
+            <img src="../img/logo.jpeg" alt="AyniGuard" class="big-logo" />
+            <h1 class="title">
+              FAMILY<br />
+              SECURITY<br />
+              TREE
+            </h1>
+            <div class="actions">
+              <button class="btn primary">Join in my Family Tree</button>
+              <button id="openModal" class="btn secondary">Create Family Tree</button>
+              
+              <a href="../html/arbol2.html" class="btn secondary">Enter family tree</a>
+            </div>
+            <div class="seed-icon">🌱</div>
+          </section>
+
+          <section class="right-panel">
+            <img src="../img/Familytree.png" alt="Family Tree" class="tree-img" />
+          </section>
+        </main>
+        <script defer src="../js/arbol.js"></script>
+      </div>
+    </div>
+
+    <!-- MODAL DE VERIFICACIÓN -->
+    <div id="verificationModal" class="modal">
+      <div class="modal-content verification-popup">
+        <h2>ENTER THE VERIFICATION CODE</h2>
+        <p>Enter the invitation code sent to your email to enter:</p>
+        <div class="code-inputs">
+          <input type="text" maxlength="1" />
+          <input type="text" maxlength="1" />
+          <input type="text" maxlength="1" />
+          <input type="text" maxlength="1" />
+        </div>
+        <button id="verifyCode" class="btn primary">GET INTO</button>
+        <p class="note">Nota: Click outside the window to exit</p>
+      </div>
+    </div>
+  </body>
+</html>
