@@ -30,10 +30,33 @@
                 </form>
 
                 <div class="options">
-                    <a href="#">Log in without a password</a>
-                    <a href="#">Forgot your password?</a>
+                    <a href="#">Iniciar sesión sin contraseña</a>
+                    <a href="#">¿Olvidaste tu contraseña?</a>
                 </div>
             </main>
+            <!-- Coloca los modales justo aquí, después del <main> -->
+            <div id="modal-login-without-password" class="modal">
+                <div class="modal-content">
+                    <h2><em>Iniciar Sesión sin contraseña</em></h2>
+                    <p>Registra tu email para acceder:<br>Hacer click en el botton te llevará directamente a iniciar sesión</p>
+                    <label>Email:</label>
+                    <input type="email" placeholder="Enter your email">
+                    <a href="#" class="login-link">Enviar email</a>
+                    <p class="note">Nota: Click fuera de la ventana para salir</p>
+                </div>
+            </div>
+
+            <div id="modal-forgot-password" class="modal">
+                  <div class="modal-content">
+                    <h2><em>¿Olvidaste tu contraseña?</em></h2>
+                    <p>Si olvidaste tu contraseña, ingresa tu email para acceder<br>Recibirás un link en tu email para resetear tu contraseña</p>
+                    <label>Email:</label>
+                    <input type="email" placeholder="Enter your email">
+                    <a href="#" class="login-link">Enviar email</a>
+                    <p class="note">Nota: Click fuera de la ventana para salir</p>
+                </div>
+            </div>
         </div>
+        <script src="../js/login.js"></script>
 </body>
 </html>
