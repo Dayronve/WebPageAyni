@@ -1,0 +1,489 @@
+/* Generales y Reset Básico */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    min-height: 100vh;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px; 
+    padding: 0px 80px 40px 80px; 
+    box-sizing: border-box;
+    margin-top: 25px; 
+}
+
+/* Encabezado */
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 300px; 
+    padding-bottom: 25px; 
+    margin-bottom: 0; 
+    border-bottom: 2px solid #00FF00;
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.2);
+    padding: 20px 40px 25px 40px; 
+}
+
+.back-button {
+    background-color: #000;
+    color: #FFF;
+    border: 2px solid #00FF00;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9em;
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.4);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+    
+}
+
+.back-button::before {
+    content: '\2190';
+    font-size: 1.2em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.back-button::after {
+    content: none !important; 
+}
+
+.back-button:hover {
+    background-color: #000;
+    color: #FFF;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    position: relative;
+}
+
+.logo img {
+    height: 65px;
+    filter: drop-shadow(0 0 4px rgba(0,255,0,0.6)) drop-shadow(0 0 8px rgba(0,255,0,0.3)); /* Brillo para el escudo */
+}
+
+.logo h1, .logo span {
+    font-size: 2.2em;
+    color: #00FF00;
+    margin: 0;
+    text-shadow: 0 0 12px rgba(0,255,0,0.8), 0 0 20px rgba(0,255,0,0.4); 
+}
+
+.page-title {
+    color: #00FF00;
+    font-size: 2.0em;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+    flex-shrink: 0;
+    display: block;
+
+}
+
+.page-title::before,
+.page-title::after {
+    content: none !important; 
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+        justify-content: center; 
+        gap: 20px; 
+        padding: 15px 20px;
+        margin-bottom: 0;
+    }
+
+    .back-button {
+        width: 100%;
+        max-width: 150px;
+        margin-bottom: 0; 
+        font-size: 0.8em;
+        padding: 8px 15px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: center;
+        margin: 0; 
+        gap: 10px;
+    }
+
+    .logo img {
+        height: 55px;
+    }
+
+    .logo h1, .logo span {
+        font-size: 1.8em;
+    }
+
+    .page-title {
+        width: 100%;
+        text-align: center;
+        font-size: 1.8em;
+        margin-top: 0; /* Eliminado si se usa gap */
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 15px;
+        gap: 15px; /* Más pequeño para móviles */
+    }
+
+    .back-button {
+        font-size: 0.7em;
+        padding: 7px 12px;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .logo h1, .logo span {
+        font-size: 1.6em;
+    }
+
+    .page-title {
+        font-size: 1.6em;
+    }
+}
+
+/* Secciones del formulario */
+.registration-form {
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.section-title {
+    color: #00FF00;
+    font-size: 1.6em;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 7px rgba(0,255,0,0.5);
+    font-style: italic;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: center; 
+}
+
+.form-row label {
+    flex-basis: auto; 
+    width: 150px; 
+    margin-right: 15px; 
+    color: #fff;
+    font-size: 1.1em;
+    text-align: right;
+}
+
+.form-row input,
+.form-row .phone-input-wrapper {
+    flex-grow: 0;
+    width: auto; 
+    max-width: 1500px; 
+    padding: 3px 10px; 
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    color: #000;
+    font-size: 1.1em;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-row input:focus,
+.form-row .phone-input-wrapper:focus-within {
+    border-color: #00FF00;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+}
+
+.form-row input#dob {
+    max-width: 150px; 
+    text-align: center;
+}
+
+.form-row .phone-input-wrapper {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.form-row .phone-input-wrapper .country-code {
+    padding: 1px 6px; 
+    background-color: #f0f0f0;
+    border-right: 1px solid #ccc;
+    color: #000;
+    font-size: 1.1em;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.form-row .phone-input-wrapper input {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    padding: 1px 6px;
+    color: #000;
+    font-size: 1.1em;
+    outline: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.registration-form .form-group input {
+    padding: 10px 18px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    color: #000;
+    font-size: 1.2em;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    display: block; 
+}
+
+.registration-form .form-group input:focus {
+    border-color: #00FF00;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+}
+
+
+.form-group.dni-passport-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group.dni-passport-group label {
+    color: #fff;
+    font-size: 1.1em;
+    width: 100%; 
+    text-align: left;
+    padding-left: calc(50% - 275px); 
+    margin-bottom: 10px;
+    box-sizing: border-box; 
+}
+
+.form-group.dni-passport-group input {
+    width: 100%;
+    max-width: 550px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group.password-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group.password-group label {
+    color: #fff;
+    font-size: 1.1em;
+    flex-shrink: 0;
+    width: 120px;
+    text-align: right; 
+    margin-right: 20px;
+    margin-bottom: 0;
+}
+
+.form-group.password-group input {
+    max-width: 300px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+
+.form-group.photo-dni-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group.photo-dni-group label {
+    color: #fff;
+    font-size: 1.1em;
+    width: 100%;
+    text-align: left; 
+    padding-left: calc(50% - 275px); 
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.photo-upload-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center; 
+    flex-wrap: wrap;
+    max-width: 550px;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.photo-placeholder {
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.5em;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group.biometric-data-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 30px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group.biometric-data-group label {
+    color: #fff;
+    font-size: 1.1em;
+    width: 100%;
+    text-align: left;
+    padding-left: calc(50% - 100px); 
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.biometric-placeholder {
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.5em;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photo-placeholder:hover,
+.biometric-placeholder:hover {
+    background-color: #f0f0f0;
+    border-color: #00FF00;
+    color: #00FF00;
+    box-shadow: 0 0 12px rgba(0, 255, 0, 0.6);
+}
+
+/* Estilo para el botón REGISTRAR */
+.register-button {
+    width: 220px;
+    padding: 15px 30px;
+    background-color: #000;
+    color: #FFF;
+    border: 2px solid #00FF00;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
+    /* Corrección para alinear a la derecha y quitar subrayado si es un <a> */
+    display: block; /* Mantenemos block para que ocupe su propia línea */
+    margin-left: auto; /* Empuja el botón a la derecha */
+    margin-right: 0; /* Aseguramos que no haya margen extra a la derecha */
+    margin-top: 70px;
+    margin-bottom: 40px;
+    text-decoration: none; /* ¡Importante para quitar el subrayado si es un <a>! */
+    text-align: center; /* Centra el texto dentro del botón */
+}
+
+.register-button:hover {
+    background-color: #000;
+    color: #FFF;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+    .register-button {
+        width: 180px;
+        font-size: 0.9em;
+        padding: 12px 20px;
+        margin-left: auto;
+        margin-right: auto; /* Centra el botón en pantallas pequeñas */
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-button {
+        font-size: 0.8em;
+        padding: 10px 18px;
+    }
+}

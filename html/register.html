@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - AyniGuard</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html" class="back-button">RETURN</a>
+        <div class="logo">
+            <img src="../img/logop.jpg" alt="AyniGuard Logo">
+            </div>
+        <h1 class="page-title">REGISTER</h1>
+    </header>
+
+    <div class="container">
+        </div>
+
+        <form class="registration-form">
+            <h2 class="section-title">Personal Data</h2>
+
+            <div class="form-row">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName">
+            </div>
+
+            <div class="form-row">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName">
+            </div>
+
+            <div class="form-row">
+                <label for="dob">Date of birth:</label>
+                <input type="text" id="dob" name="dob" placeholder="--/--/----">
+            </div>
+
+            <div class="form-row">
+                <label for="phone">Phone Number:</label>
+                <div class="phone-input-wrapper">
+                    <span class="country-code">+51</span>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-row">
+                <label for="district">Residential District:</label>
+                <input type="text" id="district" name="district">
+            </div>
+
+            <div class="form-row">
+                <label for="address">Residence address:</label>
+                <input type="text" id="address" name="address">
+            </div>
+
+            <h2 class="section-title">Identity Verification</h2>
+
+            <div class="form-group dni-passport-group"> <label for="dniPassport">DNI / Passport / Foreigner's Card</label>
+                <input type="text" id="dniPassport" name="dniPassport">
+            </div>
+
+            <div class="form-group password-group"> <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <div class="form-group password-group"> <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword">
+            </div>
+
+            <div class="form-group photo-dni-group"> <label>Photo DNI:</label>
+                <div class="photo-upload-grid">
+                    <div class="photo-placeholder">+</div>
+                    <div class="photo-placeholder">+</div>
+                    <div class="photo-placeholder">+</div>
+                </div>
+            </div>
+
+            <div class="form-group biometric-data-group"> <label>Biometric data:</label>
+                <div class="biometric-placeholder">+</div>
+            </div>
+
+            <a href="../html/login.html" class="register-button">REGISTRAR</a>
+        </form>
+    </div>
+</body>
+</html>
