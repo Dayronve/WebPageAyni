@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AyniGuard – Family Tree View</title>
+    <link rel="stylesheet" href="../css/arbol.css" />
+    
+  </head>
+  <body>
+    <div class="app">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-title">Menu</div>
+        <button class="sidebar-btn open-btn">
+          <img src="../img/icon-menu.webp" alt="Abrir menú" />
+        </button>
+        <button class="sidebar-btn">
+          <img src="../img/icon-map.png" alt="Mapa" />
+        </button>
+        <button class="sidebar-btn">
+          <img src="../img/icon-chat.png" alt="Chat" />
+        </button>
+        <button class="sidebar-btn">
+          <img src="../img/icon-family.png" alt="Familia" />
+        </button>
+        <button class="sidebar-btn close-btn">
+          <img src="../img/icon-menu.webp" alt="Cerrar menú" />
+        </button>
+      </aside>
+
+      <!-- CONTENIDO PRINCIPAL -->
+      <div class="container">
+        <!-- HEADER -->
+        <header class="header">
+          <div class="header-left">
+            <img src="../img/logo.jpg" alt="AyniGuard" class="logo" />
+            <img src="../img/logop.jpg" alt="logop" class="logop" />
+          </div>
+          <div class="header-right">
+            <img src="../img/medalla.png" alt="medalla" class="medalla">
+            <img src="../img/Engranaje.png" alt="Engranaje" class="Engranaje">
+            <img src="../img/notificacion.png" alt="notificacion" class="notificacion">
+            <img src="../img/Perfil.png" alt="Usuario" class="avatar" />
+          </div>
+        </header>
+
+        <!-- VISTA DE ÁRBOL -->
+        <main class="tree-main">
+          <div class="tree-view">
+            <!-- fondo del árbol -->
+            <img src="../img/Familytree.png" alt="" class="tree-bg" />
+
+            <!-- jpg para líneas de conexión -->
+            <jpg class="connectors" xmlns="http://www.w3.org/2000/jpg">
+              <!-- línea raíz a izquierdo -->
+              <line
+                x1="50%"
+                y1="12%"
+                x2="30%"
+                y2="30%"
+                stroke="#0dfb8c"
+                stroke-width="2"
+              />
+              <!-- línea raíz a derecho -->
+              <line
+                x1="50%"
+                y1="12%"
+                x2="70%"
+                y2="30%"
+                stroke="#0dfb8c"
+                stroke-width="2"
+              />
+              <!-- línea raíz a semilla -->
+              <line
+                x1="50%"
+                y1="12%"
+                x2="50%"
+                y2="70%"
+                stroke="#0dfb8c"
+                stroke-width="2"
+              />
+            </jpg>
+
+            <!-- nodos -->
+            <div class="node root">
+              <img src="../img/eduardo.webp" alt="Eduardo Felipe" />
+            </div>
+            <div class="node left">
+              <img src="../img/manuel.jpg" alt="Manuel Chunga" />
+            </div>
+            <div class="node right">
+              <img src="../img/anton.jpg" alt="Anton Quispe" />
+            </div>
+            <button class="node add-btn">
+              <img src="../img/icon-add.jpg" alt="Agregar" />
+            </button>
+          </div>
+
+          <!-- tarjetas de perfil -->
+          <div class="cards-container">
+            <div class="profile-card">
+              <h3>Nombre: Manuel Chunga</h3>
+              <p>Edad: 56</p>
+              <p>Dirección: Comas</p>
+              <p>Ubicación actual: San Miguel</p>
+            </div>
+            <div class="profile-card">
+              <h3>Nombre: Eduardo Felipe</h3>
+              <p>Edad: 21</p>
+              <p>Dirección: Comas</p>
+              <p>Ubicación actual: Carabayllo</p>
+            </div>
+            <div class="profile-card">
+              <h3>Nombre: Anton Quispe</h3>
+              <p>Edad: 23</p>
+              <p>Dirección: Comas</p>
+              <p>Ubicación actual: Comas</p>
+            </div>
+          </div>
+        </main>
+        <script defer src="../js/arbol.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
