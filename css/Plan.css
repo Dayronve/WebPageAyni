@@ -1,25 +1,20 @@
-/* Variables */
-:root {
-    --color-primario: #28a745;
-    --color-secundario: #ffffff;
-    --color-texto: #333333;
-    --color-fondo: #000000;
-    --borde-radius: 8px;
-    --transicion: all 0.3s ease;
-}
-
 /* Reset y Estilos Base */
 .pagina {
     margin: 0;
     font-family: "Montserrat", sans-serif;
-    background-color: var(--color-fondo);
-    color: var(--color-secundario);
+    background-color: #000000;
+    color: #ffffff;
     line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Header */
 .header {
-    border-bottom: 3px solid var(--color-primario);
+    border-bottom: 3px solid #28a745;
+    width: 100%;
 }
 
 .header__contenedor {
@@ -29,6 +24,7 @@
     padding: 12px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    width: 95%;
 }
 
 .header__logo {
@@ -41,6 +37,11 @@
     width: 60px;
     height: auto;
     object-fit: contain;
+}
+
+.header__titulo {
+    font-size: 1.5rem;
+    white-space: nowrap;
 }
 
 .header__navegacion {
@@ -69,47 +70,55 @@
     gap: 20px;
     max-width: 900px;
     margin: 0 auto;
+    width: 95%;
 }
 
 .hero__imagen {
     width: 120px;
     height: auto;
     object-fit: contain;
+    flex-shrink: 0;
 }
 
-/* Planes Section */
+.hero__titulo {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Sección de Planes */
 .planes {
     padding: 0 20px 40px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .planes__contenedor {
     display: flex;
     justify-content: center;
     gap: 25px;
-    flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .plan {
-    background-color: var(--color-secundario);
+    background-color: #ffffff;
     border: 1px solid #e0e0e0;
-    border-radius: var(--borde-radius);
+    border-radius: 8px;
     padding: 25px;
     width: 320px;
-    max-width: 100%;
     display: flex;
     flex-direction: column;
-    transition: var(--transicion);
+    transition: all 0.3s ease;
 }
 
 .plan:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .plan__titulo {
-    color: var(--color-primario);
+    color: #28a745;
     font-size: 1.4rem;
     font-weight: 700;
     text-align: center;
@@ -124,7 +133,7 @@
 }
 
 .plan__item {
-    color: var(--color-texto);
+    color: #333333;
     font-size: 0.95rem;
     margin-bottom: 10px;
     position: relative;
@@ -133,61 +142,89 @@
 
 .plan__item::before {
     content: "•";
-    color: var(--color-primario);
+    color: #28a745;
     position: absolute;
     left: 0;
 }
 
+/* --- Botones Mejorados --- */
 .plan__boton {
-    background-color: var(--color-secundario);
-    color: var(--color-texto);
-    border: 2px solid var(--color-primario);
-    padding: 10px 0;
-    border-radius: var(--borde-radius);
+    display: block;
+    background-color: #ffffff; /* Fondo blanco */
+    color: #333333; /* Texto oscuro */
+    border: 2px solid #28a745; /* Borde verde */
+    padding: 12px 0;
+    border-radius: 8px;
     font-weight: 600;
     width: 80%;
     margin: 15px auto 0;
     cursor: pointer;
-    transition: var(--transicion);
+    transition: all 0.2s ease;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+    outline: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
+/* Estado hover - se vuelve verde completo */
 .plan__boton:hover {
-    background-color: var(--color-primario);
-    color: var(--color-secundario);
+    background-color: #28a745; /* Fondo verde */
+    color: #ffffff; /* Texto blanco */
+    transform: scale(1.02);
 }
 
+/* Estado activo */
+.plan__boton:active {
+    transform: scale(0.98);
+    background-color: #218838; /* Verde más oscuro */
+}
+
+/* Elimina el estado focus no deseado */
+.plan__boton:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Botón inactivo - se mantiene gris */
 .plan__boton--inactivo {
     background-color: #f0f0f0;
-    color: #999;
-    border-color: #ddd;
+    color: #999999;
+    border-color: #dddddd;
     cursor: not-allowed;
     pointer-events: none;
+    transform: none !important;
 }
 
-/* Responsive */
+/* Elimina hover para el botón inactivo */
+.plan__boton--inactivo:hover {
+    background-color: #f0f0f0 !important;
+    color: #999999 !important;
+    border-color: #dddddd !important;
+    transform: none !important;
+}
+
+/* Optimización para móviles */
 @media (max-width: 768px) {
-    .hero__contenedor {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .hero__imagen {
-        width: 80px;
-    }
-    
     .planes__contenedor {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
     }
     
     .plan {
         width: 100%;
         max-width: 350px;
     }
-    
-    .plan__boton {
-        width: 70%;
-        padding: 12px 0;
-    }
+}
+
+@keyframes fadeIn {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
 }
