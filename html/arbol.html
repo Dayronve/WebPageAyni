@@ -5,25 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AyniGuard – Family Security Tree</title>
     <link rel="stylesheet" href="../css/arbol.css" />
-    
   </head>
   <body>
     <div class="app">
       <!-- BARRA LATERAL -->
       <aside class="sidebar">
-        <div class="sidebar-title">Menu</div>
+        <!-- Botón "Abrir menú" en la parte superior -->
         <button class="sidebar-btn open-btn">
           <img src="../img/icon-menu.webp" alt="Abrir menú" />
         </button>
-        <button class="sidebar-btn">
-          <img src="../img/icon-map.png" alt="Mapa" />
-        </button>
-        <button class="sidebar-btn">
-          <img src="../img/icon-chat.png" alt="Chat" />
-        </button>
-        <button class="sidebar-btn">
-          <img src="../img/icon-family.png" alt="Familia" />
-        </button>
+
+        <!-- Botones ocultos inicialmente (se muestran al abrir el menú) -->
+        <a href="" class="sidebar-btn" data-toggle>
+          <img src="../img/ubicacion.png" alt="Mapa">
+        </a>
+        <a href="../html/home.html" class="sidebar-btn" data-toggle>
+          <img src="../img/hablar.png" alt="Chat">
+        </a>
+        <a href="#" class="sidebar-btn" data-toggle>
+          <img src="../img/familia.png" alt="Familia">
+        </a>
+        
+
+        <!-- Botón para cerrar menú -->
         <button class="sidebar-btn close-btn">
           <img src="../img/icon-menu.webp" alt="Cerrar menú" />
         </button>
@@ -54,7 +58,6 @@
             <div class="actions">
               <button class="btn primary">Join in my Family Tree</button>
               <button id="openModal" class="btn secondary">Create Family Tree</button>
-              
               <a href="../html/arbol2.html" class="btn secondary">Enter family tree</a>
             </div>
             <div class="seed-icon">🌱</div>

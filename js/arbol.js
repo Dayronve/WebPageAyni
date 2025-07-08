@@ -202,4 +202,31 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const sidebar = document.querySelector(".sidebar");
+  const openBtn = document.querySelector(".open-btn");
+  const closeBtn = document.querySelector(".close-btn");
+
+  openBtn.addEventListener("click", () => {
+    sidebar.classList.add("expanded");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    sidebar.classList.remove("expanded");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sidebar = document.querySelector(".sidebar");
+  const openBtn = document.querySelector(".open-btn");
+  const closeBtn = document.querySelector(".close-btn");
+
+  openBtn.addEventListener("click", () => {
+    sidebar.classList.add("expanded");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    sidebar.classList.remove("expanded");
+  });
+});
 

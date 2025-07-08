@@ -5,25 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AyniGuard – Family Tree View</title>
     <link rel="stylesheet" href="../css/arbol.css" />
-    
   </head>
   <body>
     <div class="app">
-      <!-- SIDEBAR -->
+      <!-- BARRA LATERAL -->
       <aside class="sidebar">
-        <div class="sidebar-title">Menu</div>
+        <!-- Botón abrir menú -->
         <button class="sidebar-btn open-btn">
           <img src="../img/icon-menu.webp" alt="Abrir menú" />
         </button>
-        <button class="sidebar-btn">
-          <img src="../img/icon-map.png" alt="Mapa" />
-        </button>
-        <button class="sidebar-btn">
-          <img src="../img/icon-chat.png" alt="Chat" />
-        </button>
-        <button class="sidebar-btn">
-          <img src="../img/icon-family.png" alt="Familia" />
-        </button>
+
+        <!-- Botones ocultos inicialmente -->
+       <a href="" class="sidebar-btn" data-toggle>
+          <img src="../img/ubicacion.png" alt="Mapa">
+        </a>
+        <a href="../html/home.html" class="sidebar-btn" data-toggle>
+          <img src="../img/hablar.png" alt="Chat">
+        </a>
+        <a href="../html/arbol.html" class="sidebar-btn" data-toggle>
+          <img src="../img/familia.png" alt="Familia">
+        </a>
+
+        <!-- Botón cerrar menú -->
         <button class="sidebar-btn close-btn">
           <img src="../img/icon-menu.webp" alt="Cerrar menú" />
         </button>
@@ -34,13 +37,12 @@
         <!-- HEADER -->
         <header class="header">
           <div class="header-left">
-            <img src="../img/logo.jpg" alt="AyniGuard" class="logo" />
             <img src="../img/logop.jpg" alt="logop" class="logop" />
           </div>
           <div class="header-right">
-            <img src="../img/medalla.png" alt="medalla" class="medalla">
-            <img src="../img/Engranaje.png" alt="Engranaje" class="Engranaje">
-            <img src="../img/notificacion.png" alt="notificacion" class="notificacion">
+            <img src="../img/medalla.png" alt="medalla" class="medalla" />
+            <img src="../img/Engranaje.png" alt="Engranaje" class="Engranaje" />
+            <img src="../img/notificacion.png" alt="notificacion" class="notificacion" />
             <img src="../img/Perfil.png" alt="Usuario" class="avatar" />
           </div>
         </header>
@@ -52,35 +54,11 @@
             <img src="../img/Familytree.png" alt="" class="tree-bg" />
 
             <!-- jpg para líneas de conexión -->
-            <jpg class="connectors" xmlns="http://www.w3.org/2000/jpg">
-              <!-- línea raíz a izquierdo -->
-              <line
-                x1="50%"
-                y1="12%"
-                x2="30%"
-                y2="30%"
-                stroke="#0dfb8c"
-                stroke-width="2"
-              />
-              <!-- línea raíz a derecho -->
-              <line
-                x1="50%"
-                y1="12%"
-                x2="70%"
-                y2="30%"
-                stroke="#0dfb8c"
-                stroke-width="2"
-              />
-              <!-- línea raíz a semilla -->
-              <line
-                x1="50%"
-                y1="12%"
-                x2="50%"
-                y2="70%"
-                stroke="#0dfb8c"
-                stroke-width="2"
-              />
-            </jpg>
+            <svg class="connectors" xmlns="http://www.w3.org/2000/svg">
+              <line x1="50%" y1="12%" x2="30%" y2="30%" stroke="#0dfb8c" stroke-width="2" />
+              <line x1="50%" y1="12%" x2="70%" y2="30%" stroke="#0dfb8c" stroke-width="2" />
+              <line x1="50%" y1="12%" x2="50%" y2="70%" stroke="#0dfb8c" stroke-width="2" />
+            </svg>
 
             <!-- nodos -->
             <div class="node root">
