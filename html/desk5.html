@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyniGuard - Dashboard de Seguridad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+    <link rel="stylesheet" href="../css/desk5.css">
+</head>
+<body>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="overlay"></div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <ul class="sidebar-menu">
+            <li class="sidebar__item">
+                <a href="#" data-page="mapa">
+                    <div class="menu-icon">🗺️</div>
+                    <span class="sidebar__text">Mapa</span>
+                </a>
+            </li>
+            <li class="sidebar__item">
+                <a href="../html/home.html" data-page="home">
+                    <div class="menu-icon">🏠</div>
+                    <span class="sidebar__text">Home</span>
+                </a>
+            </li>
+            <li class="sidebar__item">
+                <a href="../html/arbol.html" data-page="usuarios">
+                    <div class="menu-icon">👥</div>
+                    <span class="sidebar__text">Familia</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <header class="header">
+        <div class="logo">
+            <div class="menu-icon header__menu-btn" id="menuToggle">
+                &#9776;
+            </div>
+            <div class="logo-container">
+                <img src="../img/logoAyniguard_connombre.jpg" alt="Logo">
+            </div>
+        </div>
+        <div class="header-actions">
+            <button class="icon-btn">
+                <img src="../img/medalla copy 2.png" alt="Icono 1" style="width: 32px; height: 32px; object-fit: contain;">
+            </button>
+            <button class="icon-btn">
+                <img src="../img/Engranaje copy.png" alt="Icono 2" style="width: 32px; height: 32px; object-fit: contain;">
+            </button>
+            <button class="icon-btn">
+                <img src="../img/notificacion copy.png" alt="Icono 3" style="width: 32px; height: 32px; object-fit: contain;">
+            </button>
+            <div class="user-avatar">
+                <img src="../img/Perfil copy.png" alt="Avatar" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container" id="mainContent">
+        <div class="map-section">
+            <div class="section-header">
+                <span style="color: #666;">District Actual</span>
+                <button class="toggle-btn">Comas</button>
+                <button class="refresh-btn">↻</button>
+            </div>
+            <div class="map-and-legend-container">
+                <div class="map-container">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="legend-section">
+            <div class="legend">
+                <h3>Map Legend</h3>
+                <div class="legend-item">
+                    <img src="../img/icondanger.png" alt="Danger" class="legend-color">
+                    <span>Danger</span>
+                </div>
+                <div class="legend-item">
+                    <img src="../img/iconcaurion.png" alt="Caution" class="legend-color">
+                    <span>Caution</span>
+                </div>
+                <div class="legend-item">
+                    <img src="../img/iconsafe.png" alt="Safe" class="legend-color">
+                    <span>Safe</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="reports-section">
+            <div class="report-card">
+                <div class="report-title">District Report</div>
+                <div class="report-content">
+                    More crime incidents have been reported in Comas. It's recommended to remain alert and avoid poorly lit areas. AyniGuard will send real-time alerts for added security.
+                </div>
+                
+                <div class="report-separator"></div>
+                
+                <div class="report-title">District Prediction</div>
+                <div class="report-content">
+                    An increase in crime incidents is expected in Comas over the next 48 hours. Caution is advised and we recommend monitoring AyniGuard's real-time alerts.
+                </div>
+                <div class="chart-container">
+                    <img src="../img/districprediction.png" alt="District Prediction Chart" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                </div>
+
+                <div class="report-separator"></div>
+
+                <div class="section-header">
+                    <span style="color: #666; font-weight: bold;">District Actual</span>
+                    <button class="toggle-btn" style="font-size: 12px; padding: 5px 15px;">Comas</button>
+                    <button class="refresh-btn" style="padding: 5px;">↻</button>
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong>Comment Report</strong>
+                    <div class="navigation">
+                        <button class="nav-btn">&lt;</button>
+                        <div class="page-numbers">
+                            <button class="nav-btn active">1</button>
+                            <button class="nav-btn">2</button>
+                            <button class="nav-btn">3</button>
+                        </div>
+                        <button class="nav-btn">&gt;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="security-badge" title="Security Status">🔒</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="../js/desk5.js"></script>
+</body>
+</html>
